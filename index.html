@@ -9,7 +9,7 @@
       --primary: #ff6f61;
       --accent: #ffd54f;
       --text: #fefefe;
-      --bg1: #1e1e2f;
+      --bg1: #999999;
       --bg2: #2a2a3d;
     }
 
@@ -92,6 +92,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
       position: relative;
       transition: 0.3s;
+      overflow: hidden;
     }
 
     .social-icon-box:hover {
@@ -106,6 +107,24 @@
       color: #ccc;
       width: 100%;
       text-align: center;
+    }
+
+    .social-icon-box::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      animation: spinBorder 4s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes spinBorder {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     .social-icon {
@@ -207,13 +226,13 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="social-icon" alt="Telegram" />
     </a>
     <a class="social-icon-box" href="https://www.tiktok.com/@quickhub360uae" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/TikTok_icon_white.svg" class="social-icon" alt="TikTok" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" class="social-icon" alt="TikTok" />
     </a>
   </div>
 
   <div class="web-links">
     <a href="https://www.quickhub360.com/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Globe_icon_white.svg" alt="World" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Globe_icon.svg" alt="World" />
       www.quickhub360.com
     </a>
     <a href="https://www.quickhub360.ae/" target="_blank">
