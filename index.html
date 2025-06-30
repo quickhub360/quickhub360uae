@@ -8,9 +8,9 @@
     :root {
       --primary: #b71c1c;
       --accent: #ff9800;
-      --bg-light: #fffaf3;
-      --text-dark: #222;
-      --soft: #fff7ec;
+      --bg: #fffdf9;
+      --text: #222;
+      --soft: #fff3e0;
     }
 
     * {
@@ -20,48 +20,49 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #ffffff, #fff5e6);
-      color: var(--text-dark);
-      padding: 20px;
+      background: linear-gradient(to bottom right, #ffffff, #fff2e6);
+      color: var(--text);
+      padding: 25px 15px;
     }
 
     header {
       text-align: center;
-      animation: fadeIn 1.2s ease-in-out;
+      animation: fadeIn 1s ease-in-out;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 36px;
       color: var(--primary);
       margin: 0;
     }
 
     h2 {
-      font-size: 18px;
+      font-size: 20px;
       color: #444;
-      margin: 8px 0 20px;
+      margin: 10px 0 20px;
+      font-weight: 500;
     }
 
     .badge {
       display: inline-block;
-      padding: 8px 16px;
+      padding: 10px 18px;
       background-color: var(--soft);
       border: 2px dashed var(--accent);
-      border-radius: 10px;
+      border-radius: 12px;
       font-weight: bold;
       font-size: 14px;
       color: var(--accent);
-      margin-bottom: 10px;
       animation: pulse 2s infinite;
     }
 
     .coming {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
       color: var(--primary);
+      margin-top: 10px;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      animation: glow 2.5s ease-in-out infinite;
+      letter-spacing: 1.5px;
+      animation: glow 2s ease-in-out infinite;
     }
 
     p {
@@ -72,41 +73,11 @@
       font-size: 16px;
     }
 
-    .form-container {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    input[type="tel"] {
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      width: 80%;
-      max-width: 300px;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 12px 25px;
-      font-size: 16px;
-      background: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #9a1818;
-    }
-
     .socials {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
-      max-width: 400px;
+      max-width: 420px;
       margin: 40px auto 0;
     }
 
@@ -133,6 +104,7 @@
     .social-icon {
       width: 24px;
       height: 24px;
+      object-fit: contain;
     }
 
     .footer {
@@ -159,8 +131,8 @@
     }
 
     @keyframes glow {
-      0%, 100% { text-shadow: 0 0 5px #ffc107, 0 0 15px #ff9800; }
-      50% { text-shadow: 0 0 20px #ff9800, 0 0 30px #ffc107; }
+      0%, 100% { text-shadow: 0 0 6px #ffc107, 0 0 12px #ff9800; }
+      50% { text-shadow: 0 0 15px #ff9800, 0 0 30px #ffc107; }
     }
 
     @keyframes pulse {
@@ -183,23 +155,15 @@
 <body>
 
   <header>
-    <h1>🚀 Quick Hub 360 UAE</h1>
-    <h2>Buy • Sell • Rent • Hire — All in One Place</h2>
+    <h1>🇦🇪 Quick Hub 360 UAE</h1>
+    <h2>Buy • Sell • Rent • Anything Anytime • All in One Place in UAE</h2>
     <div class="badge">🛠️ Under Maintenance</div>
     <div class="coming">✨ Coming Soon ✨</div>
   </header>
 
   <p>
-    From phones and laptops to vehicles, jobs, rentals and services – Quick Hub 360 UAE will be your trusted online marketplace. We're working hard to bring you something powerful!
+    Whether you're looking for electronics, vehicles, property, jobs, or services – Quick Hub 360 UAE is your go-to digital marketplace for the Emirates. Join our community today!
   </p>
-
-  <div class="form-container">
-    <form onsubmit="event.preventDefault(); alert('✅ Thank you! We’ll contact you shortly.');">
-      <input type="tel" placeholder="📞 Your Mobile Number" required />
-      <br />
-      <button type="submit">Notify Me</button>
-    </form>
-  </div>
 
   <div class="socials">
     <a class="social-link" href="https://www.facebook.com/quickhub360uae" target="_blank">
@@ -218,9 +182,13 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="social-icon" alt="WhatsApp" />
       WhatsApp
     </a>
-    <a class="social-link" href="#" onclick="alert('🎵 Coming soon on TikTok!'); return false;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/TikTok_logo.svg" class="social-icon" alt="TikTok" />
-      TikTok (Coming Soon)
+    <a class="social-link" href="https://t.me/+971568082732" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="social-icon" alt="Telegram" />
+      Telegram
+    </a>
+    <a class="social-link" href="https://www.tiktok.com/@quickhub360uae" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/en/6/69/TikTok_logo.svg" class="social-icon" alt="TikTok" />
+      TikTok
     </a>
   </div>
 
