@@ -6,12 +6,11 @@
   <title>Quick Hub 360 🇦🇪 – UAE Marketplace</title>
   <style>
     :root {
-      --primary: #b71c1c;
-      --accent: #ff9800;
-      --bg: #fffdf9;
-      --text: #222;
-      --soft: #fff3e0;
-      --brand: #00796b;
+      --primary: #ff6f61;
+      --accent: #ffd54f;
+      --text: #fefefe;
+      --bg1: #1e1e2f;
+      --bg2: #2a2a3d;
     }
 
     * {
@@ -21,125 +20,117 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #ffffff, #fff2e6);
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
       color: var(--text);
       padding: 25px 15px;
-    }
-
-    header {
       text-align: center;
-      animation: fadeIn 1s ease-in-out;
     }
 
-    h1 {
-      font-size: 34px;
+    header h1 {
+      font-size: 28px;
       color: var(--primary);
-      margin: 0;
+      margin-bottom: 6px;
     }
 
-    .flag-inline {
-      height: 18px;
-      vertical-align: middle;
-      margin-left: 5px;
-    }
-
-    h2 {
-      font-size: 18px;
-      color: #444;
-      margin: 8px 0 20px;
-      font-weight: 500;
+    header h2 {
+      font-size: 16px;
+      color: #ccc;
+      margin: 5px 0 15px;
     }
 
     .badge {
-      display: inline-block;
-      padding: 10px 18px;
-      background-color: var(--soft);
+      background: rgba(255, 213, 79, 0.1);
       border: 2px dashed var(--accent);
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 10px;
       color: var(--accent);
-      animation: pulse 2s infinite;
+      font-weight: bold;
+      font-size: 13px;
+      display: inline-block;
+      margin-bottom: 10px;
     }
 
     .coming {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: bold;
       color: var(--primary);
-      margin-top: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      animation: glow 2s ease-in-out infinite;
+      margin: 10px 0 20px;
+      animation: glow 2s infinite ease-in-out;
     }
 
     p {
-      text-align: center;
-      max-width: 600px;
-      margin: 20px auto;
-      line-height: 1.6;
-      font-size: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #ddd;
+      margin-bottom: 30px;
+      padding: 0 10px;
     }
 
     .section-title {
-      text-align: center;
-      font-size: 18px;
-      margin: 40px auto 20px;
+      font-size: 15px;
       font-weight: bold;
-      color: #b71c1c;
+      color: var(--accent);
+      margin-bottom: 15px;
     }
 
     .socials {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      max-width: 420px;
-      margin: 0 auto 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 25px;
     }
 
     .social-link {
+      width: 90%;
+      max-width: 320px;
+      background: #2f2f44;
+      border-radius: 8px;
+      padding: 10px 14px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fefefe;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 12px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      transition: transform 0.3s, background 0.3s;
     }
 
     .social-link:hover {
-      transform: translateY(-2px);
-      background-color: #fff3e0;
+      transform: scale(1.03);
+      background: #3a3a55;
     }
 
     .social-icon {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
+      width: 22px;
+      height: 22px;
     }
 
     .web-links {
-      text-align: center;
+      margin-top: 10px;
       font-size: 14px;
-      margin-top: 15px;
-      color: #333;
     }
 
     .web-links a {
-      display: inline-flex;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 6px;
-      color: var(--brand);
+      gap: 8px;
+      margin: 8px auto;
+      color: #ffffff;
       text-decoration: none;
-      margin: 8px;
-      padding: 6px 12px;
-      border: 1px solid #eee;
+      padding: 8px 14px;
+      background-color: #29293d;
       border-radius: 8px;
-      background: #fdfdfd;
+      width: fit-content;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+
+    .web-links a:hover {
+      background-color: #393956;
     }
 
     .web-links img {
@@ -149,86 +140,38 @@
       object-fit: cover;
     }
 
-    .web-links a:hover {
-      background-color: #f1f1f1;
-      text-decoration: underline;
-    }
-
     .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 15px;
-    }
-
-    .contact {
-      font-size: 16px;
-      margin-top: 20px;
-    }
-
-    .ceo {
-      margin-top: 10px;
-      font-weight: bold;
+      margin-top: 25px;
+      font-size: 14px;
+      color: #ccc;
     }
 
     .flag {
-      width: 20px;
-      height: 14px;
-      object-fit: cover;
+      width: 18px;
+      height: 12px;
+      vertical-align: middle;
+      margin-right: 5px;
       border-radius: 2px;
     }
 
-    .lang-switch {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 14px;
-      cursor: pointer;
-      z-index: 10;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
     @keyframes glow {
-      0%, 100% { text-shadow: 0 0 6px #ffc107, 0 0 12px #ff9800; }
-      50% { text-shadow: 0 0 15px #ff9800, 0 0 30px #ffc107; }
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.05); opacity: 0.95; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 480px) {
-      .socials {
-        grid-template-columns: 1fr;
-      }
+      0% { text-shadow: 0 0 5px #ffd54f; }
+      50% { text-shadow: 0 0 15px #ff6f61; }
+      100% { text-shadow: 0 0 5px #ffd54f; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Language Switch (placeholder) -->
-  <div class="lang-switch" onclick="alert('🔄 Language switching coming soon!');">
-    🇬🇧 English | 🇸🇦 العربية
-  </div>
-
   <header>
-    <h1>Quick Hub 360 <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" class="flag-inline" alt="UAE" /></h1>
-    <h2>Buy • Sell • Rent • Anything Anytime • All in One Place in UAE</h2>
+    <h1>Quick Hub 360 🇦🇪</h1>
+    <h2>Buy • Sell • Rent • Anything Anytime</h2>
     <div class="badge">🛠️ Under Maintenance</div>
     <div class="coming">✨ Coming Soon ✨</div>
   </header>
 
   <p>
-    Whether you're looking for electronics, vehicles, property, jobs, or services – Quick Hub 360 is your go-to digital marketplace for the Emirates. Join our growing community today!
+    Phones, vehicles, jobs, real estate, and services — Quick Hub 360 is your powerful online marketplace for the UAE. Be part of something big!
   </p>
 
   <div class="section-title">🌐 Join Our Community – UAE</div>
@@ -255,32 +198,31 @@
       Telegram
     </a>
     <a class="social-link" href="https://www.tiktok.com/@quickhub360uae" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/en/6/69/TikTok_logo.svg" class="social-icon" alt="TikTok" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/TikTok_Icon_Black_Circle.svg" class="social-icon" alt="TikTok" />
       TikTok
     </a>
   </div>
 
   <div class="web-links">
     <a href="https://www.quickhub360.com/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Globe_icon.svg" alt="World" /> quickhub360.com – Global Platform
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Globe_icon.svg" alt="World" />
+      www.quickhub360.com
     </a>
     <a href="https://www.quickhub360.ae/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE" /> quickhub360.ae – UAE Platform
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE Flag" />
+      www.quickhub360.ae
     </a>
     <a href="https://www.quickhub360.lk/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg" alt="SL" /> quickhub360.lk – Sri Lanka Platform
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg" alt="SL Flag" />
+      www.quickhub360.lk
     </a>
   </div>
 
   <div class="footer">
-    <div class="contact">
-      📞 General Inquiries: <strong>056 808 2732</strong>
-    </div>
-    <div class="ceo">
-      👤 CEO Direct: 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" class="flag" alt="UAE" />
-      <a href="tel:+971568082732">056 808 2732</a>
-    </div>
+    📞 Inquiries: <strong>056 808 2732</strong><br/>
+    👤 CEO Direct: 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" class="flag" alt="UAE" />
+    <a href="tel:+971568082732" style="color:#ffd54f;">056 808 2732</a>
   </div>
 
 </body>
