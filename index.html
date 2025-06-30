@@ -22,18 +22,18 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       color: var(--text);
-      padding: 25px 15px;
+      padding: 20px 15px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 28px;
+      font-size: 26px;
       color: var(--primary);
       margin-bottom: 6px;
     }
 
     header h2 {
-      font-size: 16px;
+      font-size: 15px;
       color: #ccc;
       margin: 5px 0 15px;
     }
@@ -41,7 +41,7 @@
     .badge {
       background: rgba(255, 213, 79, 0.1);
       border: 2px dashed var(--accent);
-      padding: 8px 14px;
+      padding: 7px 12px;
       border-radius: 10px;
       color: var(--accent);
       font-weight: bold;
@@ -51,7 +51,7 @@
     }
 
     .coming {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: bold;
       color: var(--primary);
       margin: 10px 0 20px;
@@ -59,10 +59,10 @@
     }
 
     p {
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1.5;
       color: #ddd;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       padding: 0 10px;
     }
 
@@ -75,32 +75,37 @@
 
     .socials {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
       margin-bottom: 25px;
     }
 
-    .social-link {
-      width: 90%;
-      max-width: 320px;
+    .social-icon-box {
+      width: 48px;
+      height: 48px;
       background: #2f2f44;
-      border-radius: 8px;
-      padding: 10px 14px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #fefefe;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-      transition: transform 0.3s, background 0.3s;
+      position: relative;
+      transition: 0.3s;
     }
 
-    .social-link:hover {
-      transform: scale(1.03);
+    .social-icon-box:hover {
+      transform: scale(1.1);
       background: #3a3a55;
+    }
+
+    .social-icon-box span {
+      position: absolute;
+      top: 52px;
+      font-size: 11px;
+      color: #ccc;
+      width: 100%;
+      text-align: center;
     }
 
     .social-icon {
@@ -141,7 +146,7 @@
     }
 
     .footer {
-      margin-top: 25px;
+      margin-top: 20px;
       font-size: 14px;
       color: #ccc;
     }
@@ -158,6 +163,13 @@
       0% { text-shadow: 0 0 5px #ffd54f; }
       50% { text-shadow: 0 0 15px #ff6f61; }
       100% { text-shadow: 0 0 5px #ffd54f; }
+    }
+
+    @media (max-width: 400px) {
+      .socials {
+        gap: 10px;
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
@@ -177,29 +189,25 @@
   <div class="section-title">🌐 Join Our Community – UAE</div>
 
   <div class="socials">
-    <a class="social-link" href="https://www.facebook.com/quickhub360uae" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="social-icon" alt="Facebook" />
-      Facebook Page
+    <a class="social-icon-box" href="https://www.facebook.com/quickhub360uae" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="social-icon" alt="Facebook Page" />
+      <span>P</span>
     </a>
-    <a class="social-link" href="https://www.facebook.com/groups/quickhub360" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="social-icon" alt="Group" />
-      Facebook Group
+    <a class="social-icon-box" href="https://www.facebook.com/groups/quickhub360" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="social-icon" alt="Facebook Group" />
+      <span>G</span>
     </a>
-    <a class="social-link" href="https://www.instagram.com/quickhub360uae/" target="_blank">
+    <a class="social-icon-box" href="https://www.instagram.com/quickhub360uae/" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="social-icon" alt="Instagram" />
-      Instagram
     </a>
-    <a class="social-link" href="https://wa.me/971568082732" target="_blank">
+    <a class="social-icon-box" href="https://wa.me/971568082732" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="social-icon" alt="WhatsApp" />
-      WhatsApp
     </a>
-    <a class="social-link" href="https://t.me/+971568082732" target="_blank">
+    <a class="social-icon-box" href="https://t.me/+971568082732" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="social-icon" alt="Telegram" />
-      Telegram
     </a>
-    <a class="social-link" href="https://www.tiktok.com/@quickhub360uae" target="_blank">
+    <a class="social-icon-box" href="https://www.tiktok.com/@quickhub360uae" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/TikTok_Icon_Black_Circle.svg" class="social-icon" alt="TikTok" />
-      TikTok
     </a>
   </div>
 
@@ -220,7 +228,7 @@
 
   <div class="footer">
     📞 Inquiries: <strong>056 808 2732</strong><br/>
-    👤 CEO Direct: 
+    👤 CEO Dinesh:
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" class="flag" alt="UAE" />
     <a href="tel:+971568082732" style="color:#ffd54f;">056 808 2732</a>
   </div>
