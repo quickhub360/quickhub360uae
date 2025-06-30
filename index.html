@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quick Hub 360 UAE – Online Marketplace</title>
   <style>
+    :root {
+      --primary: #b71c1c;
+      --accent: #ff9800;
+      --bg-light: #fffaf3;
+      --text-dark: #222;
+      --soft: #fff7ec;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -12,220 +20,219 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #fefefe, #f6f2eb);
-      background-size: cover;
-      background-repeat: no-repeat;
-      color: #333;
+      background: linear-gradient(to bottom right, #ffffff, #fff5e6);
+      color: var(--text-dark);
+      padding: 20px;
+    }
+
+    header {
       text-align: center;
-      padding: 40px 20px;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
     h1 {
-      font-size: 40px;
-      color: #b71c1c;
-      margin-bottom: 10px;
+      font-size: 32px;
+      color: var(--primary);
+      margin: 0;
     }
 
     h2 {
-      font-size: 22px;
+      font-size: 18px;
       color: #444;
-      margin-bottom: 10px;
+      margin: 8px 0 20px;
     }
 
-    .coming-soon {
-      font-size: 26px;
-      font-weight: bold;
-      color: #d84315;
-      margin: 20px 0;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      animation: glow 2s ease-in-out infinite;
-    }
-
-    @keyframes glow {
-      0% { text-shadow: 0 0 5px #ff6, 0 0 10px #ff9800; }
-      50% { text-shadow: 0 0 15px #ff9800, 0 0 20px #ffc107; }
-      100% { text-shadow: 0 0 5px #ff6, 0 0 10px #ff9800; }
-    }
-
-    .maintenance-highlight {
-      font-size: 20px;
-      color: #d84315;
-      background-color: #fff7ec;
-      padding: 10px 20px;
-      border: 2px solid #ffcc80;
-      border-radius: 12px;
+    .badge {
       display: inline-block;
-      margin: 20px 0;
+      padding: 8px 16px;
+      background-color: var(--soft);
+      border: 2px dashed var(--accent);
+      border-radius: 10px;
       font-weight: bold;
-      animation: pulseHighlight 2s infinite ease-in-out;
-      box-shadow: 0 0 10px rgba(255, 152, 0, 0.15);
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      animation: pulse 2s infinite;
     }
 
-    @keyframes pulseHighlight {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.03); opacity: 0.9; }
-      100% { transform: scale(1); opacity: 1; }
+    .coming {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: glow 2.5s ease-in-out infinite;
     }
 
     p {
-      max-width: 700px;
-      margin: 0 auto 20px;
-      font-size: 18px;
-      color: #444;
+      text-align: center;
+      max-width: 600px;
+      margin: 20px auto;
       line-height: 1.6;
+      font-size: 16px;
     }
 
-    .input-form {
-      margin-top: 30px;
+    .form-container {
+      text-align: center;
+      margin: 30px 0;
     }
 
     input[type="tel"] {
-      padding: 10px;
+      padding: 12px;
       font-size: 16px;
       border-radius: 8px;
       border: 1px solid #ccc;
-      width: 250px;
-      max-width: 80%;
-      margin-right: 10px;
+      width: 80%;
+      max-width: 300px;
     }
 
     button {
-      padding: 10px 20px;
-      background-color: #b71c1c;
+      margin-top: 10px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: var(--primary);
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 16px;
+      transition: 0.3s ease;
     }
 
     button:hover {
-      opacity: 0.9;
+      background-color: #9a1818;
     }
 
-    .social-links {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
+    .socials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      max-width: 400px;
+      margin: 40px auto 0;
     }
 
-    .social-links a {
-      text-decoration: none;
-      color: inherit;
+    .social-link {
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
-      padding: 8px 14px;
-      border-radius: 8px;
-      background: #ffffffcc;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+      color: #333;
+      transition: all 0.3s ease;
     }
 
-    .social-links a:hover {
-      transform: scale(1.05);
+    .social-link:hover {
+      transform: translateY(-2px);
+      background-color: #fff3e0;
     }
 
     .social-icon {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 15px;
     }
 
     .contact {
-      margin-top: 40px;
-      font-size: 18px;
-      color: #222;
+      font-size: 16px;
+      margin-top: 20px;
     }
 
-    .ceo-call {
-      margin-top: 15px;
-      font-size: 16px;
+    .ceo {
+      margin-top: 10px;
       font-weight: bold;
     }
 
-    .ceo-call span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      font-size: 18px;
-      margin: 5px 0;
-    }
-
     .flag {
-      width: 22px;
-      height: 16px;
-      border: 1px solid #ccc;
+      width: 20px;
+      height: 14px;
       object-fit: cover;
+      border-radius: 2px;
     }
 
-    .ceo-call a {
-      color: #00796b;
-      text-decoration: none;
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 5px #ffc107, 0 0 15px #ff9800; }
+      50% { text-shadow: 0 0 20px #ff9800, 0 0 30px #ffc107; }
     }
 
-    .ceo-call a:hover {
-      text-decoration: underline;
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.95; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .socials {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>🚀 Quick Hub 360 UAE</h1>
-  <h2>Buy • Sell • Rent • Hire — All in One Place</h2>
+  <header>
+    <h1>🚀 Quick Hub 360 UAE</h1>
+    <h2>Buy • Sell • Rent • Hire — All in One Place</h2>
+    <div class="badge">🛠️ Under Maintenance</div>
+    <div class="coming">✨ Coming Soon ✨</div>
+  </header>
 
-  <div class="coming-soon">✨ COMING SOON ✨</div>
+  <p>
+    From phones and laptops to vehicles, jobs, rentals and services – Quick Hub 360 UAE will be your trusted online marketplace. We're working hard to bring you something powerful!
+  </p>
 
-  <div class="maintenance-highlight">🛠️ <strong>We Are Under Maintenance</strong></div>
-
-  <p>From phones and laptops to vehicles, jobs, rooms, rentals and services – Quick Hub 360 UAE is your one-stop marketplace. Stay tuned while we build something powerful for the UAE.</p>
-
-  <div class="input-form">
-    <form onsubmit="event.preventDefault(); alert('Thank you! We’ll contact you shortly.');">
-      <input type="tel" placeholder="📞 Enter your number" required />
-      <button type="submit">Submit</button>
+  <div class="form-container">
+    <form onsubmit="event.preventDefault(); alert('✅ Thank you! We’ll contact you shortly.');">
+      <input type="tel" placeholder="📞 Your Mobile Number" required />
+      <br />
+      <button type="submit">Notify Me</button>
     </form>
   </div>
 
-  <div class="social-links">
-    <a href="https://www.facebook.com/quickhub360uae" target="_blank">
+  <div class="socials">
+    <a class="social-link" href="https://www.facebook.com/quickhub360uae" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="social-icon" alt="Facebook" />
       Facebook Page
     </a>
-    <a href="https://www.facebook.com/groups/quickhub360" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="social-icon" alt="Facebook Group" />
+    <a class="social-link" href="https://www.facebook.com/groups/quickhub360" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="social-icon" alt="Group" />
       Facebook Group
     </a>
-    <a href="https://www.instagram.com/quickhub360uae/" target="_blank">
+    <a class="social-link" href="https://www.instagram.com/quickhub360uae/" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="social-icon" alt="Instagram" />
       Instagram
     </a>
-    <a href="https://wa.me/971568082732" target="_blank">
+    <a class="social-link" href="https://wa.me/971568082732" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="social-icon" alt="WhatsApp" />
       WhatsApp
     </a>
-    <a href="#">🎵 TikTok (Coming Soon)</a>
+    <a class="social-link" href="#" onclick="alert('🎵 Coming soon on TikTok!'); return false;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/TikTok_logo.svg" class="social-icon" alt="TikTok" />
+      TikTok (Coming Soon)
+    </a>
   </div>
 
-  <div class="contact">
-    📞 General Inquiries: <strong>056 808 2732</strong>
-  </div>
-
-  <div class="ceo-call">
-    📞 Call CEO Dinesh Directly:
-    <span>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" class="flag" alt="UAE Flag" />
+  <div class="footer">
+    <div class="contact">
+      📞 General Inquiries: <strong>056 808 2732</strong>
+    </div>
+    <div class="ceo">
+      👤 CEO Direct: 
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" class="flag" alt="UAE" />
       <a href="tel:+971568082732">056 808 2732</a>
-    </span>
-    <span>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg" class="flag" alt="Sri Lanka Flag" />
-      <a href="tel:+94774707651">077 470 7651</a>
-    </span>
+    </div>
   </div>
 
 </body>
