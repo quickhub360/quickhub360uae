@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quick Hub 360 UAE – Online Marketplace</title>
+  <title>Quick Hub 360 🇦🇪 – UAE Marketplace</title>
   <style>
     :root {
       --primary: #b71c1c;
@@ -11,6 +11,7 @@
       --bg: #fffdf9;
       --text: #222;
       --soft: #fff3e0;
+      --brand: #00796b;
     }
 
     * {
@@ -31,15 +32,21 @@
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 34px;
       color: var(--primary);
       margin: 0;
     }
 
+    .flag-inline {
+      height: 18px;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+
     h2 {
-      font-size: 20px;
+      font-size: 18px;
       color: #444;
-      margin: 10px 0 20px;
+      margin: 8px 0 20px;
       font-weight: 500;
     }
 
@@ -73,12 +80,20 @@
       font-size: 16px;
     }
 
+    .section-title {
+      text-align: center;
+      font-size: 18px;
+      margin: 40px auto 20px;
+      font-weight: bold;
+      color: #b71c1c;
+    }
+
     .socials {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
       max-width: 420px;
-      margin: 40px auto 0;
+      margin: 0 auto 20px;
     }
 
     .social-link {
@@ -107,6 +122,38 @@
       object-fit: contain;
     }
 
+    .web-links {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    .web-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--brand);
+      text-decoration: none;
+      margin: 8px;
+      padding: 6px 12px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background: #fdfdfd;
+    }
+
+    .web-links img {
+      width: 18px;
+      height: 12px;
+      border-radius: 2px;
+      object-fit: cover;
+    }
+
+    .web-links a:hover {
+      background-color: #f1f1f1;
+      text-decoration: underline;
+    }
+
     .footer {
       text-align: center;
       margin-top: 40px;
@@ -128,6 +175,20 @@
       height: 14px;
       object-fit: cover;
       border-radius: 2px;
+    }
+
+    .lang-switch {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     @keyframes glow {
@@ -154,16 +215,23 @@
 </head>
 <body>
 
+  <!-- Language Switch (placeholder) -->
+  <div class="lang-switch" onclick="alert('🔄 Language switching coming soon!');">
+    🇬🇧 English | 🇸🇦 العربية
+  </div>
+
   <header>
-    <h1>🇦🇪 Quick Hub 360 UAE</h1>
+    <h1>Quick Hub 360 <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" class="flag-inline" alt="UAE" /></h1>
     <h2>Buy • Sell • Rent • Anything Anytime • All in One Place in UAE</h2>
     <div class="badge">🛠️ Under Maintenance</div>
     <div class="coming">✨ Coming Soon ✨</div>
   </header>
 
   <p>
-    Whether you're looking for electronics, vehicles, property, jobs, or services – Quick Hub 360 UAE is your go-to digital marketplace for the Emirates. Join our community today!
+    Whether you're looking for electronics, vehicles, property, jobs, or services – Quick Hub 360 is your go-to digital marketplace for the Emirates. Join our growing community today!
   </p>
+
+  <div class="section-title">🌐 Join Our Community – UAE</div>
 
   <div class="socials">
     <a class="social-link" href="https://www.facebook.com/quickhub360uae" target="_blank">
@@ -189,6 +257,18 @@
     <a class="social-link" href="https://www.tiktok.com/@quickhub360uae" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/en/6/69/TikTok_logo.svg" class="social-icon" alt="TikTok" />
       TikTok
+    </a>
+  </div>
+
+  <div class="web-links">
+    <a href="https://www.quickhub360.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Globe_icon.svg" alt="World" /> quickhub360.com – Global Platform
+    </a>
+    <a href="https://www.quickhub360.ae/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE" /> quickhub360.ae – UAE Platform
+    </a>
+    <a href="https://www.quickhub360.lk/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg" alt="SL" /> quickhub360.lk – Sri Lanka Platform
     </a>
   </div>
 
