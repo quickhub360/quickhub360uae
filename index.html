@@ -4,81 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quick Hub 360 – UAE Marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #ff6f61;
       --accent: #ffd54f;
-      --text: #fefefe;
-      --bg1: #999999;
-      --bg2: #2a2a3d;
+      --text-light: #fefefe;
+      --bg-gradient-start: #1e1e2f;
+      --bg-gradient-end: #0f0f1a;
+      --card-bg: #1e1e2f;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
-      color: var(--text);
-      padding: 20px 15px;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+      color: var(--text-light);
       text-align: center;
+      padding: 20px;
     }
 
     header h1 {
-      font-size: 26px;
+      font-size: 32px;
       color: var(--primary);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     header h2 {
-      font-size: 15px;
+      font-size: 16px;
       color: #ccc;
-      margin: 5px 0 15px;
+      margin-bottom: 20px;
     }
 
     .badge {
-      background: rgba(255, 213, 79, 0.1);
-      border: 2px dashed var(--accent);
-      padding: 7px 12px;
-      border-radius: 10px;
-      color: var(--accent);
-      font-weight: bold;
-      font-size: 13px;
       display: inline-block;
+      border: 2px dashed var(--accent);
+      background: rgba(255, 213, 79, 0.1);
+      color: var(--accent);
+      padding: 6px 14px;
+      font-weight: bold;
+      border-radius: 10px;
       margin-bottom: 10px;
     }
 
     .coming {
-      font-size: 17px;
+      font-size: 18px;
       font-weight: bold;
       color: var(--primary);
-      margin: 10px 0 20px;
       animation: glow 2s infinite ease-in-out;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.6;
       color: #ddd;
-      margin-bottom: 25px;
-      padding: 0 10px;
+      max-width: 700px;
+      margin: 0 auto 30px;
     }
 
     .section-title {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: bold;
       color: var(--accent);
-      margin-bottom: 15px;
+      margin: 20px 0 15px;
     }
 
     .socials {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 14px;
-      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
     }
 
     .social-icon-box {
@@ -89,42 +91,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
       position: relative;
-      transition: 0.3s;
-      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, background 0.4s ease;
+      animation: pulse 2s infinite;
     }
 
     .social-icon-box:hover {
-      transform: scale(1.1);
-      background: #3a3a55;
+      transform: scale(1.2) rotate(10deg);
+      background: var(--primary);
     }
 
-    .social-icon-box span {
-      position: absolute;
-      top: 52px;
-      font-size: 11px;
-      color: #ccc;
-      width: 100%;
-      text-align: center;
-    }
-
-    .social-icon-box::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      border: 2px solid var(--accent);
-      animation: spinBorder 4s linear infinite;
-      opacity: 0.3;
-    }
-
-    @keyframes spinBorder {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
 
     .social-icon {
@@ -133,41 +114,41 @@
     }
 
     .web-links {
-      margin-top: 10px;
-      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
     }
 
     .web-links a {
       display: flex;
-      justify-content: center;
       align-items: center;
       gap: 8px;
-      margin: 8px auto;
-      color: #ffffff;
+      background: #29293d;
+      padding: 10px 16px;
+      border-radius: 6px;
       text-decoration: none;
-      padding: 8px 14px;
-      background-color: #29293d;
-      border-radius: 8px;
-      width: fit-content;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+      color: white;
+      font-size: 14px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.2);
       transition: background 0.3s;
     }
 
     .web-links a:hover {
-      background-color: #393956;
+      background: #3c3c58;
     }
 
     .web-links img {
       width: 18px;
       height: 12px;
       border-radius: 2px;
-      object-fit: cover;
     }
 
     .footer {
-      margin-top: 20px;
       font-size: 14px;
       color: #ccc;
+      margin-top: 30px;
     }
 
     .flag {
@@ -175,20 +156,12 @@
       height: 12px;
       vertical-align: middle;
       margin-right: 5px;
-      border-radius: 2px;
     }
 
     @keyframes glow {
-      0% { text-shadow: 0 0 5px #ffd54f; }
-      50% { text-shadow: 0 0 15px #ff6f61; }
-      100% { text-shadow: 0 0 5px #ffd54f; }
-    }
-
-    @media (max-width: 400px) {
-      .socials {
-        gap: 10px;
-        flex-wrap: wrap;
-      }
+      0% { text-shadow: 0 0 5px var(--accent); }
+      50% { text-shadow: 0 0 15px var(--primary); }
+      100% { text-shadow: 0 0 5px var(--accent); }
     }
   </style>
 </head>
@@ -210,11 +183,9 @@
   <div class="socials">
     <a class="social-icon-box" href="https://www.facebook.com/quickhub360uae" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="social-icon" alt="Facebook Page" />
-      <span>P</span>
     </a>
     <a class="social-icon-box" href="https://www.facebook.com/groups/quickhub360" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="social-icon" alt="Facebook Group" />
-      <span>G</span>
     </a>
     <a class="social-icon-box" href="https://www.instagram.com/quickhub360uae/" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="social-icon" alt="Instagram" />
@@ -248,7 +219,7 @@
   <div class="footer">
     👤 CEO Direct:
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" class="flag" alt="UAE" />
-    <a href="https://wa.me/971568082732" style="color:#ffd54f;">056 808 2732</a>
+    <a href="https://wa.me/971568082732" style="color:#ffd54f; text-decoration: none;">056 808 2732</a>
   </div>
 
 </body>
